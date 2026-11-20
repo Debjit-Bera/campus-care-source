@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusCare – Smart Campus Issue Reporting &amp; Resolution Tracking</title>
+  <meta name="description" content="CampusCare is a centralized platform where students report campus problems and track their resolution transparently.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="index">
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html" style="padding:0"><img src="assets/logo.svg" alt="" width="36" height="36"><span>Campus<b>Care</b></span></a>
+      <button class="icon-btn nav-toggle" id="navToggle" aria-label="Toggle menu"><i data-lucide="menu"></i></button>
+      <nav class="nav-links" id="navLinks">
+        <a class="link" href="#features">Features</a>
+        <a class="link" href="#how">How it works</a>
+        <a class="link" href="#categories">Categories</a>
+        <div class="nav-auth" id="navAuth">
+          <a class="btn btn-outline btn-sm" href="login.html">Log in</a>
+          <a class="btn btn-primary btn-sm" href="register.html">Get started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><i data-lucide="sparkles" style="width:15px;height:15px"></i> Open Innovation Hackathon Project</span>
+          <h1>Fix campus problems <span class="grad">faster</span>, together.</h1>
+          <p class="lead">CampusCare is a smart complaint platform where students report broken fans, leaking coolers, slow Wi-Fi and more, and watch every issue move from <b>Pending</b> to <b>Resolved</b> in the open.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="register.html" data-cta-auth>Report an issue <i data-lucide="arrow-right"></i></a>
+            <a class="btn btn-outline btn-lg" href="login.html">Admin login</a>
+          </div>
+          <div class="hero-trust">
+            <span><i data-lucide="check-circle-2"></i> Unique complaint IDs</span>
+            <span><i data-lucide="check-circle-2"></i> Live status tracking</span>
+            <span><i data-lucide="check-circle-2"></i> Admin remarks</span>
+          </div>
+        </div>
+
+        <div style="position:relative">
+          <div class="mock" aria-hidden="true">
+            <div class="mock-bar"><i></i><i></i><i></i></div>
+            <div class="mock-stats">
+              <div class="mock-stat"><b>128</b><small>Total</small></div>
+              <div class="mock-stat"><b style="color:#d97706">34</b><small>Pending</small></div>
+              <div class="mock-stat"><b style="color:#059669">79</b><small>Resolved</small></div>
+            </div>
+            <div class="mock-row"><div class="mini-icon"><i data-lucide="zap"></i></div><div><b>Ceiling fans not working</b><small>CC-2026-0001 · Block B</small></div><span class="badge badge-resolved"><span class="dot"></span>Resolved</span></div>
+            <div class="mock-row"><div class="mini-icon"><i data-lucide="droplets"></i></div><div><b>Water cooler leaking</b><small>CC-2026-0002 · Library</small></div><span class="badge badge-progress"><span class="dot"></span>In Progress</span></div>
+            <div class="mock-row"><div class="mini-icon"><i data-lucide="wifi"></i></div><div><b>Wi-Fi slow in hostel</b><small>CC-2026-0003 · Hostel C</small></div><span class="badge badge-pending"><span class="dot"></span>Pending</span></div>
+          </div>
+          <div class="float-card a"><span class="ok"><i data-lucide="check"></i></span> Issue resolved in 3 days</div>
+          <div class="float-card b"><span class="bl"><i data-lucide="bell-ring"></i></span> Status update received</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="container grid">
+        <div><b>8</b><span>Issue categories</span></div>
+        <div><b>3</b><span>Clear status stages</span></div>
+        <div><b>24/7</b><span>Report from any device</span></div>
+        <div><b>100%</b><span>Transparent tracking</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Features</span>
+          <h2>Everything needed to resolve issues, in one place</h2>
+          <p>Simple for students, powerful for administrators.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature"><div class="fi"><i data-lucide="file-plus-2"></i></div><h3>Easy complaint submission</h3><p>Describe the problem, pick a category and priority, add a photo and get a unique complaint ID instantly.</p></div>
+          <div class="feature"><div class="fi"><i data-lucide="route"></i></div><h3>Real-time tracking</h3><p>Follow every complaint through Pending, In Progress and Resolved with a full status history.</p></div>
+          <div class="feature"><div class="fi"><i data-lucide="message-square-text"></i></div><h3>Admin remarks</h3><p>Administrators post updates so students always know what is being done and when.</p></div>
+          <div class="feature"><div class="fi"><i data-lucide="thumbs-up"></i></div><h3>Support similar issues</h3><p>Tap “Me too” on existing complaints to show how many students are affected, with no duplicates.</p></div>
+          <div class="feature"><div class="fi"><i data-lucide="chart-pie"></i></div><h3>Analytics dashboard</h3><p>Category-wise and status-wise charts help admins spot problem areas and prioritise work.</p></div>
+          <div class="feature"><div class="fi"><i data-lucide="bell-ring"></i></div><h3>Instant notifications</h3><p>Get notified when a complaint is submitted, updated or resolved. Nothing slips through.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="how">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>From problem to solution in four steps</h2>
+          <p>A transparent journey every student can follow.</p>
+        </div>
+        <div class="steps">
+          <div class="step-card"><div class="step-num"><i data-lucide="user-plus"></i></div><h3>1. Register</h3><p>Create a free student account in under a minute.</p></div>
+          <div class="step-card"><div class="step-num"><i data-lucide="megaphone"></i></div><h3>2. Report</h3><p>Submit the issue with details, priority and an optional photo.</p></div>
+          <div class="step-card"><div class="step-num"><i data-lucide="wrench"></i></div><h3>3. Admin acts</h3><p>The facilities team reviews, updates status and adds remarks.</p></div>
+          <div class="step-card"><div class="step-num"><i data-lucide="badge-check"></i></div><h3>4. Resolved</h3><p>Track progress and get notified when it is fixed.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Categories</span>
+          <h2>Report anything that affects campus life</h2>
+          <p>From broken benches to unreliable Wi-Fi.</p>
+        </div>
+        <div class="cat-grid">
+          <div class="cat"><div class="mini-icon"><i data-lucide="zap"></i></div>Electrical</div>
+          <div class="cat"><div class="mini-icon"><i data-lucide="school"></i></div>Classroom Maintenance</div>
+          <div class="cat"><div class="mini-icon"><i data-lucide="droplets"></i></div>Water Supply</div>
+          <div class="cat"><div class="mini-icon"><i data-lucide="sparkles"></i></div>Cleanliness</div>
+          <div class="cat"><div class="mini-icon"><i data-lucide="wifi"></i></div>Internet / Wi-Fi</div>
+          <div class="cat"><div class="mini-icon"><i data-lucide="armchair"></i></div>Furniture</div>
+          <div class="cat"><div class="mini-icon"><i data-lucide="building-2"></i></div>Infrastructure</div>
+          <div class="cat"><div class="mini-icon"><i data-lucide="more-horizontal"></i></div>Others</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="container">
+        <div class="cta">
+          <h2>Ready to make your campus better?</h2>
+          <p>Join CampusCare and turn everyday complaints into visible, trackable action.</p>
+          <div class="hero-cta">
+            <a class="btn btn-white btn-lg" href="register.html">Create student account</a>
+            <a class="btn btn-outline btn-lg" href="login.html">Log in</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div>
+          <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="32" height="32"><span>Campus<b>Care</b></span></a>
+          <p style="max-width:340px">A Smart Campus Issue Reporting and Resolution Tracking Platform.</p>
+        </div>
+        <div><b style="color:#fff;display:block;margin-bottom:10px">Explore</b><a href="#features">Features</a><a href="#how">How it works</a><a href="#categories">Categories</a></div>
+        <div><b style="color:#fff;display:block;margin-bottom:10px">Account</b><a href="login.html">Log in</a><a href="register.html">Register</a></div>
+      </div>
+      <div class="legal">© 2026 CampusCare · Open Innovation Hackathon prototype. Demo data is stored only in your browser.</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

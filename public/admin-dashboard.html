@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard – CampusCare</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-role="admin" data-page="admin-dashboard" data-title="Admin Dashboard">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content">
+
+      <div class="hero-banner">
+        <div><h2>Campus overview</h2><p>Live statistics and analytics across all student complaints.</p></div>
+        <a class="btn btn-white" href="manage-complaints.html"><i data-lucide="clipboard-list"></i> Manage complaints</a>
+      </div>
+      <div class="stat-grid six" id="statGrid"></div>
+      <div class="two-col" style="grid-template-columns:1fr 1.6fr">
+        <section class="card"><div class="card-head"><h3>Status breakdown</h3></div><div class="chart-box"><canvas id="statusChart"></canvas></div></section>
+        <section class="card"><div class="card-head"><h3>Complaints by category</h3></div><div class="chart-box"><canvas id="categoryChart"></canvas></div></section>
+      </div>
+      <div class="two-col" style="grid-template-columns:1.6fr 1fr">
+        <section class="card"><div class="card-head"><h3>New complaints – last 7 days</h3></div><div class="chart-box"><canvas id="trendChart"></canvas></div></section>
+        <section class="card"><div class="card-head"><h3>By priority</h3></div><div class="chart-box"><canvas id="priorityChart"></canvas></div></section>
+      </div>
+      <div class="two-col">
+        <section class="card table-card">
+          <div class="card-head" style="padding:20px 24px 0"><h3>Recent complaints</h3><a class="link-btn" href="manage-complaints.html">View all →</a></div>
+          <div class="table-wrap"><table class="table" id="recentTable"><thead><tr><th>ID</th><th>Title</th><th>Category</th><th>Priority</th><th>Status</th><th>Reported</th></tr></thead><tbody id="recentBody"></tbody></table></div>
+        </section>
+        <section class="card"><div class="card-head"><h3>Most supported open issues</h3></div><div id="topList"></div></section>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

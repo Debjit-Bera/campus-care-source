@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Complaints – CampusCare</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-role="student" data-page="my-complaints" data-title="My Complaints">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content">
+
+      <div class="page-head"><div><h2>Complaints</h2><p>Track your own reports or support issues from other students.</p></div><a class="btn btn-primary" href="report.html"><i data-lucide="plus"></i> New complaint</a></div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" id="tabMine" data-tab="mine" role="tab">My complaints <span class="tab-count">0</span></button>
+        <button class="tab" id="tabCommunity" data-tab="community" role="tab">Community issues <span class="tab-count">0</span></button>
+      </div>
+
+      <div class="toolbar">
+        <div class="input-wrap search-wrap"><i data-lucide="search"></i><input class="input" id="search" type="search" placeholder="Search by ID, title, location…" aria-label="Search complaints"></div>
+        <select class="input" id="f-status" data-fill="statuses" aria-label="Filter by status"><option value="">All statuses</option></select>
+        <select class="input" id="f-category" data-fill="categories" aria-label="Filter by category"><option value="">All categories</option></select>
+        <select class="input" id="f-priority" data-fill="priorities" aria-label="Filter by priority"><option value="">All priorities</option></select>
+        <select class="input" id="f-sort" aria-label="Sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="priority">Highest priority</option><option value="supported">Most supported</option></select>
+        <button class="btn btn-outline btn-sm" id="clearFilters" type="button"><i data-lucide="rotate-ccw"></i> Reset</button>
+      </div>
+
+      <div class="result-line" id="resultCount"></div>
+      <div class="c-list" id="complaintList"></div>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/common.js"></script>
+<script src="js/student.js"></script>
+</body>
+</html>

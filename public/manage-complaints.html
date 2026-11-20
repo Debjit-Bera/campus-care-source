@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage Complaints – CampusCare</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-role="admin" data-page="manage-complaints" data-title="Manage Complaints">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content">
+
+      <div class="page-head"><div><h2>All complaints</h2><p>Review, filter and update every student complaint.</p></div><button class="btn btn-outline" id="exportBtn"><i data-lucide="download"></i> Export CSV</button></div>
+      <div class="summary-chips">
+        <div class="sum-chip">Total <b id="sumTotal">0</b></div><div class="sum-chip">Pending <b id="sumPending">0</b></div><div class="sum-chip">In Progress <b id="sumProgress">0</b></div><div class="sum-chip">Resolved <b id="sumResolved">0</b></div>
+      </div>
+
+      <div class="toolbar">
+        <div class="input-wrap search-wrap"><i data-lucide="search"></i><input class="input" id="search" type="search" placeholder="Search by ID, title, location…" aria-label="Search complaints"></div>
+        <select class="input" id="f-status" data-fill="statuses" aria-label="Filter by status"><option value="">All statuses</option></select>
+        <select class="input" id="f-category" data-fill="categories" aria-label="Filter by category"><option value="">All categories</option></select>
+        <select class="input" id="f-priority" data-fill="priorities" aria-label="Filter by priority"><option value="">All priorities</option></select>
+        <select class="input" id="f-sort" aria-label="Sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="priority">Highest priority</option><option value="supported">Most supported</option></select>
+        <button class="btn btn-outline btn-sm" id="clearFilters" type="button"><i data-lucide="rotate-ccw"></i> Reset</button>
+      </div>
+
+      <div class="result-line" id="resultCount"></div>
+      <section class="card table-card"><div class="table-wrap"><table class="table">
+        <thead><tr><th>ID</th><th>Complaint</th><th>Category</th><th>Priority</th><th>Support</th><th>Status</th><th>Date</th><th>Actions</th></tr></thead>
+        <tbody id="manageBody"></tbody></table></div></section>
+
+    </main>
+  </div>
+</div>
+
+<div class="modal" id="updateModal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <form class="modal-box" id="modalForm" novalidate>
+    <h3>Update complaint</h3>
+    <p class="sub" id="mTitle"></p>
+    <div class="field"><label for="mStatus">Status</label><select class="input" id="mStatus" data-fill="statuses"></select></div>
+    <div class="field"><label for="mRemark">Remark / update <span class="opt">(visible to the student)</span></label><textarea class="input" id="mRemark" rows="3" maxlength="300" placeholder="e.g. Electrician assigned, work starts tomorrow."></textarea></div>
+    <div class="modal-actions"><button type="button" class="btn btn-outline" data-close-modal="updateModal">Cancel</button><button type="submit" class="btn btn-primary"><i data-lucide="save"></i> Save update</button></div>
+  </form>
+</div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

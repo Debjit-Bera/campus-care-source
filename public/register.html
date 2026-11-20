@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register – CampusCare</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="register">
+  <div class="auth-wrap">
+    <aside class="auth-side">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="36" height="36"><span>Campus<b>Care</b></span></a>
+      <div style="position:relative;z-index:1">
+        <h2>Your voice can fix your campus.</h2>
+        <p>Create a free student account and start reporting issues in minutes.</p>
+        <ul class="auth-points">
+          <li><i data-lucide="check-circle-2"></i> Get a unique ID for every complaint</li>
+          <li><i data-lucide="check-circle-2"></i> Support issues other students report</li>
+          <li><i data-lucide="check-circle-2"></i> See admin remarks and progress</li>
+        </ul>
+      </div>
+      <small style="color:#bfdbfe;position:relative;z-index:1">© 2026 CampusCare</small>
+    </aside>
+
+    <main class="auth-main">
+      <div class="auth-box">
+        <a class="back-link" href="index.html"><i data-lucide="arrow-left"></i> Back to home</a>
+        <h1>Create your account</h1>
+        <p class="sub">Student registration</p>
+
+        <div class="alert alert-error" id="formAlert" role="alert" hidden></div>
+
+        <form id="registerForm" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <div class="input-wrap"><i data-lucide="user-round"></i><input class="input" type="text" id="name" autocomplete="name" placeholder="e.g. Priya Verma"></div>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <div class="input-wrap"><i data-lucide="mail"></i><input class="input" type="email" id="email" autocomplete="email" placeholder="you@college.edu"></div>
+          </div>
+          <div class="field">
+            <label for="department">Department / Course <span class="opt">(optional)</span></label>
+            <div class="input-wrap"><i data-lucide="graduation-cap"></i><input class="input" type="text" id="department" placeholder="e.g. Computer Science"></div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="password">Password</label>
+              <div class="input-wrap has-toggle"><i data-lucide="lock"></i><input class="input" type="password" id="password" autocomplete="new-password" placeholder="Min 6 chars"><button type="button" class="pw-toggle" data-toggle-password="password" aria-label="Show password"><i data-lucide="eye"></i></button></div>
+            </div>
+            <div class="field">
+              <label for="confirm">Confirm password</label>
+              <div class="input-wrap has-toggle"><i data-lucide="lock-keyhole"></i><input class="input" type="password" id="confirm" autocomplete="new-password" placeholder="Repeat password"><button type="button" class="pw-toggle" data-toggle-password="confirm" aria-label="Show password"><i data-lucide="eye"></i></button></div>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit">Create account <i data-lucide="user-plus"></i></button>
+        </form>
+
+        <p class="auth-foot">Already registered? <a href="login.html"><b>Log in</b></a></p>
+        <p class="auth-warn">Prototype notice: your account is stored only in this browser and is not secure production authentication.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

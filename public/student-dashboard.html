@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard – CampusCare</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-role="student" data-page="student-dashboard" data-title="Dashboard">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content">
+
+      <div class="hero-banner">
+        <div><h2>Hello, <span id="welcomeName">there</span> 👋</h2><p>Spot something broken on campus? Report it in under a minute and follow the fix.</p></div>
+        <a class="btn btn-white" href="report.html"><i data-lucide="plus-circle"></i> Report an issue</a>
+      </div>
+      <div class="stat-grid" id="statGrid"></div>
+      <div class="two-col">
+        <section>
+          <div class="card-head"><h3>Recent complaints</h3><a class="link-btn" href="my-complaints.html">View all →</a></div>
+          <div class="c-list" id="recentList"></div>
+        </section>
+        <aside>
+          <section class="card">
+            <h3>Resolution progress</h3>
+            <div class="rate-num" id="rateNum">0%</div>
+            <div class="progress"><div id="rateBar" style="width:0"></div></div>
+            <small class="muted" id="rateText"></small>
+          </section>
+          <section class="card">
+            <div class="card-head"><h3>Trending on campus</h3><a class="link-btn" href="my-complaints.html?tab=community">Browse</a></div>
+            <div id="trendList"></div>
+          </section>
+        </aside>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/common.js"></script>
+<script src="js/student.js"></script>
+</body>
+</html>
